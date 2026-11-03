@@ -1,4 +1,3 @@
-// ignore_for_file: avoid_print
 class Kucing {
   Kucing(this.name);
 
