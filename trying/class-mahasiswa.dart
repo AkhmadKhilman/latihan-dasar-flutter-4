@@ -1,7 +1,13 @@
 class Mahasiswa {
-  Mahasiswa(this.nama, this.nim, this.prodi);
+  Mahasiswa({
+    required this.nama,
+    required this.nim,
+    required this.prodi,
+    this.ukm,
+  });
 
   final String nama, nim, prodi;
+  final String? ukm;
 
   String teknikInformatika() {
     return "Mata Kuliah yang diambil: Pemrograman Mobile, Pemrograman Web, Jaringan Komputer";
@@ -41,10 +47,26 @@ class Mahasiswa {
 }
 
 void main() {
+  // final dataMahasiswa = [
+  //   Mahasiswa("Budi", "123456", "Teknik Informatika"),
+  //   Mahasiswa("Ani", "654321", "Bisnis Digital"),
+  //   Mahasiswa("Cici", "789012", "Manajemen Ritel"),
+  // ];
+
   final dataMahasiswa = [
-    Mahasiswa('Budi', '123456)', 'Teknik Informatika'),
-    Mahasiswa('Ani', '654321', 'Bisnis Digital'),
-    Mahasiswa('Cici', '789012', 'Manajemen Ritel'),
+    Mahasiswa(nama: "Danu", nim: "12345", prodi: "Teknik Informatika", ukm: ""),
+    Mahasiswa(
+      nama: "Tirta",
+      nim: "12345",
+      prodi: "Manajemen Ritel",
+      ukm: "KUAS",
+    ),
+    Mahasiswa(
+      nama: "Cahyo",
+      nim: "12345",
+      prodi: "Computer Desain Multimedia",
+      ukm: "",
+    ),
   ];
 
   for (var M in dataMahasiswa) {
